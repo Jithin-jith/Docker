@@ -1,0 +1,5 @@
+# get current working directory of the docker image
+docker run <IMAGE-NAME> pwd
+
+# get username in the docker image
+docker run py-image whoami
