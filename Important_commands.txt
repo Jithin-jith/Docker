@@ -1,0 +1,5 @@
+#delete all containers together
+docker container rm -f $(docker container ls -aq)
+
+#delete all images together
+docker image rm -f $(docker image ls -q)
