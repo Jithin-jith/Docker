@@ -9,3 +9,6 @@ docker login -u <username>
 #After that you need to enter the login credentials and you will be logged in
 
 #The image name should be 'user_name/repo_name'
+
+#Publishing image to docker 
+docker push user_name/repo_name
