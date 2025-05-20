@@ -1,0 +1,11 @@
+#Log in to DockerHub
+docker login
+
+#Enter the login credentials
+docker login -u <username>
+
+#This will take you to a link where you have to enter the one-time device confirmation code shown in the terminal
+#Ther you need to verify the one-time device confirmation code shown in the terminal and the link are same
+#After that you need to enter the login credentials and you will be logged in
+
+#The image name should be 'user_name/repo_name'
