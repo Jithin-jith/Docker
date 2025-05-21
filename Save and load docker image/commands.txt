@@ -1,0 +1,8 @@
+#build an docker image from the existing dockerfile
+docker build -t py-image
+
+#save the docker image as a .tar file
+docker save -o py-image.tar py-image:latest
+
+#load the docker image from the .tar file
+docker load -i py-image.tar
