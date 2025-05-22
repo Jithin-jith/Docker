@@ -1,0 +1,35 @@
+A Docker volume is a directory stored in the host filesystem (or managed by Docker) that is mounted into one or more containers.
+
+Why Use Docker Volumes?
+
+1.Data Persistence
+    Volumes ensure that data remains intact even if the container is stopped, restarted, or deleted.
+2.Sharing Data Between Containers
+    Multiple containers can mount the same volume and access shared data.
+3.Backup and Restore
+    Volumes can easily be backed up or migrated by copying the volume directory on the host.
+4.Separation of Concerns
+    Keeps your data separate from the container image, improving modularity and security.
+
+Steps to create and check a docker Volumes
+
+1. create a ubuntu container in interactive mode with volume option
+docker run -it -v <system_path/data:\container_path\test\data\> ubuntu
+
+2. Create a file in the system_path\data
+cd system_path/test/data/
+mkdir Docker/test/data/testing_docker_volumes.txt
+
+3. This file will be created in the docker file location as well (\container_path\test\data\)
+
+4. Stop docker container
+(usually when a docker container is stopped all the data will be erased, but now since we have mounted that onto host the data will persist.)
+
+5.start docker container
+docker start <CONTAINER_ID>
+
+6.execute the docker container
+docker exec -it <CONTAINER_ID> /bin/bash
+
+7. Navigate to the directory and check
+cd data/test
